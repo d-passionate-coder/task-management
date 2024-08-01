@@ -18,7 +18,7 @@ import Dashboard from "./pages/Dashboard.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
 
-axios.defaults.baseURL = "http://localhost:8000/";
+axios.defaults.baseURL = "https://task-management-api-pvfx.onrender.com/";
 axios.defaults.withCredentials = true;
 
 const router = createBrowserRouter(

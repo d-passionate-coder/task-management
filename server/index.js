@@ -25,10 +25,6 @@ app.use(express.json());
 app.use(cors(corsOptions));
 app.use(cookieParser());
 
-app.use("*", (req, res, next) => {
-  console.log(req.secure);
-  next();
-});
 app.use("/signup", signupRoute);
 app.use("/login", loginRoute);
 app.use("/logout", logoutRoute);
