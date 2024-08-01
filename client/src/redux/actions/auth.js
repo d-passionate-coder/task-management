@@ -38,7 +38,7 @@ const registerUser = createAsyncThunk("registerUser", async (userData) => {
     const response = await axios.post("signup", userData);
     const user = JSON.stringify(response.data);
     localStorage.setItem("user", user);
-    addSampleTasks();
+    await addSampleTasks();
     return response.data;
   } catch (error) {
     console.log(error.response.data);
