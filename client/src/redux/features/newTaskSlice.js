@@ -34,7 +34,6 @@ export const newTaskSlice = createSlice({
       }
     },
     setTask: (state, action) => {
-      console.log(action.payload);
       Object.keys(action.payload).forEach((key) => {
         if (key == "deadline")
           state.task.deadline = action.payload.deadline?.substring(0, 10) || "";

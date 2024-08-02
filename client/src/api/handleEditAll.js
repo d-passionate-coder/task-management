@@ -1,12 +1,11 @@
 import axios from "axios";
+import { updateAll } from "../redux/features/taskSlice";
 import { store } from "../redux/store";
-import getTasks from "../redux/actions/tasks";
 
 const handleEditAllTask = async (taskData) => {
   try {
-    console.log("taskData", taskData);
+    store.dispatch(updateAll(taskData));
     await axios.put("task/edit/all", taskData);
-    store.dispatch(getTasks());
   } catch (error) {
     console.log(error);
   }

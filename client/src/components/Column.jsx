@@ -108,6 +108,7 @@ const Column = ({ column }) => {
       elements[task.status] += 1;
       return task;
     });
+    console.log(updatedTasks);
     return updatedTasks;
   };
 

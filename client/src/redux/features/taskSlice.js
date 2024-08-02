@@ -32,6 +32,10 @@ export const taskSlice = createSlice({
       );
       state.tasks = updatedTasks;
     },
+    updateAll: (state, action) => {
+      console.log("taskdata", action.payload);
+      state.tasks = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -48,5 +52,5 @@ export const taskSlice = createSlice({
   },
 });
 
-export const { updateTasks, deleteTask } = taskSlice.actions;
+export const { updateTasks, deleteTask, updateAll } = taskSlice.actions;
 export default taskSlice.reducer;

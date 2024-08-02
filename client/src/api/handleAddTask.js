@@ -4,7 +4,7 @@ import getTasks from "../redux/actions/tasks.js";
 
 const handleAddTask = async (taskData) => {
   try {
-    const res = await axios.post("task/add", taskData);
+    await axios.post("task/add", taskData);
     store.dispatch(getTasks());
   } catch (error) {
     console.log(error);

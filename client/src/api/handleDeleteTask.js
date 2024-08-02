@@ -3,8 +3,8 @@ import { store } from "../redux/store";
 import { deleteTask } from "../redux/features/taskSlice";
 
 const handleDeleteTask = async (id) => {
-  await axios.delete(`task/${id}`);
   store.dispatch(deleteTask(id));
+  await axios.delete(`task/${id}`);
 };
 
 export default handleDeleteTask;
